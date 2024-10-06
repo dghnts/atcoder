@@ -1,0 +1,7 @@
+S = input()
+
+	flag = True
+
+	for i in range(len(S)):
+		if i == 0 and S[i].islower():
+

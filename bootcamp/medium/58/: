@@ -1,0 +1,36 @@
+n, a, b, c, d = map(int, input().split())
+s = input()
+
+sunuke = a
+funuke = b
+
+flg = True
+
+if s[a] == "#" and s[a+1] == "#":
+    flg = False
+
+if s[b] == "#" and s[b+1] == "#":
+    flg = False
+
+if c < d:
+    for i in range(b, d-2):
+        if s[i] == "#" and s[i+1] == "#":
+            flg = False
+            break
+    for j in range(a, c-2):
+        if s[i] == "#" and s[j+1] == "#":
+            flg = False
+            break
+else:
+    s[b-1] = "#"
+    for i in range(b, c-2):
+        if s[i] == "#" and s[i+1] == "#":
+            flg = False
+            break
+    for j in range(a, d-2):
+        if s[i] == "#" and s[j+1] == "#":
+            flg = False
+            break
+
+
+print("Yes" if flg else "No")

@@ -1,0 +1,16 @@
+import math
+N, M, K = map(int, input().split())
+
+if M < N:
+    N, M = M, N
+
+G = math.gcd(N, M)
+
+L = N*M // G
+
+n = L//M
+m = L//N
+
+# このとき,N=nG,M=mG gcd(n,m)=1
+# 繰り返しの回数
+rep = (n - 1) + (m - 1)
